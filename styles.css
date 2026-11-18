@@ -1,0 +1,144 @@
+/*
+  Paper: the icon's warm white as the page, Radix Sand for ink and lines, Radix Amber for "now",
+  and the four category hues only where the categories themselves are shown.
+  Four type sizes: 56 / 24 / 15 / 13. Lines are half a pixel.
+*/
+:root {
+  --paper: #faf8f2; --sand1: #fdfdfc;
+  --sand6: #dad9d6; --sand8: #bcbbb5; --sand9: #8d8d86; --sand11: #63635e; --sand12: #21201c;
+  --amber9: #ffc53d; --amber11: #ab6400;
+  --line: .5px solid var(--sand6);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--sand12);
+  font: 15px/1.7 -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--amber9); outline-offset: 3px; border-radius: 4px; }
+
+/* One language at a time. */
+html[data-lang="zh"] [lang="en"], html[data-lang="en"] [lang="zh"] { display: none; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+
+nav { display: flex; align-items: center; justify-content: space-between; height: 64px; border-bottom: var(--line); font-size: 13px; color: var(--sand11); }
+.brand { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--sand12); }
+.links { display: flex; align-items: center; gap: 28px; }
+.links a:hover, #language:hover { color: var(--sand12); }
+#language { font-size: 13px; color: var(--sand11); padding: 4px 10px; border: var(--line); border-radius: 6px; }
+
+h1 { font-size: 56px; line-height: 1.12; letter-spacing: -1.4px; font-weight: 650; }
+html[data-lang="zh"] h1 { letter-spacing: -.5px; line-height: 1.2; }
+h2 { font-size: 24px; line-height: 1.3; letter-spacing: -.3px; font-weight: 600; }
+.lede { margin-top: 20px; font-size: 15px; color: var(--sand11); max-width: 30em; }
+.note { margin-top: 12px; font-size: 13px; color: var(--sand9); font-variant-numeric: tabular-nums; }
+.button { display: inline-flex; align-items: center; height: 44px; padding: 0 24px; margin-top: 32px; border-radius: 22px; background: var(--sand12); color: var(--paper); font-weight: 550; }
+.button:hover { background: #3b3a37; }
+
+.hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 24px; padding-top: 72px; padding-bottom: 56px; }
+/* Multiply drops the drawing's white paper and leaves its lines on the page's own. */
+.portrait { mix-blend-mode: multiply; width: 100%; max-width: 440px; justify-self: end; }
+
+.rhythm { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 20px; padding: 22px 0; border-top: var(--line); border-bottom: var(--line); font-size: 13px; color: var(--sand11); font-variant-numeric: tabular-nums; }
+.year { display: flex; align-items: center; gap: 3px; height: 16px; }
+.year i { flex: 1; height: 8px; border-radius: 1px; background: var(--sand6); }
+.year i.past { background: var(--sand9); }
+.year i.now { height: 16px; background: var(--amber9); }
+.year i.tidy { flex: 1.6; margin-left: 5px; background: none; border: .5px dashed var(--sand9); }
+.year i.tidy.now { border: 0; background: var(--amber9); }
+
+/* The screenshot carries its own window shadow; let it reach a little past the column. */
+.shot { margin: 40px -56px 0; max-width: calc(100% + 112px); width: calc(100% + 112px); }
+
+#plan { padding-top: 40px; }
+
+/* Each of the three things Asaki does opens with its name on a hairline. */
+.part { padding: 20px 0; border-top: var(--line); font-size: 13px; font-weight: 600; color: var(--amber11); }
+.part + .feature { border-top: 0; padding-top: 40px; }
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 72px 0; border-top: var(--line); }
+.feature p { margin-top: 14px; color: var(--sand11); max-width: 30em; }
+figure { justify-self: center; width: 100%; max-width: 380px; }
+/* A screenshot under its text, as wide as the page's own one. */
+.feature.wide { align-items: start; row-gap: 0; }
+.feature.wide .shot { grid-column: 1 / -1; }
+
+figcaption { margin-top: 14px; font-size: 13px; color: var(--sand11); font-variant-numeric: tabular-nums; }
+
+.periods { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; }
+.periods i { aspect-ratio: 1; border-radius: 3px; border: .5px solid var(--sand8); }
+.periods i.past { background: var(--sand9); border-color: var(--sand9); }
+.periods i.now { background: var(--amber9); border-color: var(--amber9); }
+.periods i.tidy { grid-column: 1 / -1; aspect-ratio: auto; height: 10px; border-style: dashed; }
+
+.flow { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); font-size: 13px; color: var(--sand11); }
+.flow li { position: relative; padding: 18px 0 18px 16px; border: var(--line); border-right: 0; }
+.flow li:first-child { border-radius: 8px 0 0 8px; }
+.flow li:last-child { border-right: var(--line); border-radius: 0 8px 8px 0; }
+.flow li.now { color: var(--sand12); font-weight: 600; }
+.flow li.now::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: var(--amber9); vertical-align: 2px; }
+/* An arrowhead on each divider: tasks only ever move this way. */
+.flow li + li::after { content: ""; position: absolute; left: -4.5px; top: 50%; width: 8px; height: 8px; margin-top: -4px; background: var(--paper); border-top: var(--line); border-right: var(--line); border-color: var(--sand9); transform: rotate(45deg); }
+
+.shapes { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; font-size: 13px; color: var(--sand11); }
+.shapes svg { display: block; width: 44px; height: 44px; margin: 0 auto 10px; fill: none; stroke: var(--pale); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.shapes .on { stroke: var(--hue); stroke-dasharray: var(--done) 100; }
+.shapes .full .on { fill: color-mix(in srgb, var(--hue) 30%, transparent); }
+
+.keys { display: grid; font-size: 13px; color: var(--sand11); }
+.keys div { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: var(--line); }
+.keys div:first-child { border-top: var(--line); }
+.keys dt { display: flex; gap: 4px; }
+kbd { min-width: 26px; height: 26px; padding: 0 7px; display: inline-flex; align-items: center; justify-content: center; border: var(--line); border-color: var(--sand8); border-radius: 6px; background: var(--sand1); font: 13px/1 -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; color: var(--sand12); }
+
+.services { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--sand11); }
+.services li { padding: 5px 12px; border: var(--line); border-color: var(--sand8); border-radius: 14px; }
+/* The tools that run on this Mac, set apart from the online services. */
+.services li.local { color: var(--sand12); border-color: var(--sand12); }
+
+.details { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; padding: 56px 0 96px; border-top: var(--line); }
+.details dt { font-weight: 600; }
+.details dt em { font-style: normal; font-weight: 400; font-size: 13px; color: var(--amber11); margin-left: 6px; white-space: nowrap; }
+.details dd { margin-top: 6px; color: var(--sand11); }
+
+.download { text-align: center; padding-top: 80px; padding-bottom: 104px; border-top: var(--line); }
+.download img { margin: 0 auto 20px; }
+
+footer { display: flex; justify-content: space-between; padding-top: 24px; padding-bottom: 40px; border-top: var(--line); font-size: 13px; color: var(--sand9); }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a:hover { color: var(--sand12); }
+
+/* The privacy policy: one readable column of text under the page's own navigation. */
+.policy { padding-top: 56px; padding-bottom: 96px; }
+.policy article { max-width: 42em; }
+.policy h3 { font-size: 15px; font-weight: 600; margin-top: 40px; }
+.policy p, .policy li { color: var(--sand11); }
+.policy p { margin-top: 12px; }
+.policy strong { color: var(--sand12); font-weight: 600; }
+.policy ul, .policy ol { margin-top: 12px; padding-left: 1.4em; }
+.policy li + li { margin-top: 6px; }
+.policy li ul { margin-top: 8px; }
+.policy .mail { color: var(--sand12); border-bottom: var(--line); border-color: var(--sand9); }
+
+@media (max-width: 860px) {
+  .wrap { padding: 0 24px; }
+  h1 { font-size: 40px; letter-spacing: -.8px; }
+  .links { gap: 18px; }
+  .links a[href="#plan"], .links a[href="#capture"], .links a[href="#review"] { display: none; }
+  .hero { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 40px; }
+  .portrait { justify-self: center; max-width: 280px; order: -1; }
+  .rhythm { grid-template-columns: 1fr auto; row-gap: 12px; }
+  .rhythm .year { grid-column: 1 / -1; grid-row: 2; }
+  .shot { margin: 28px -16px 0; max-width: calc(100% + 32px); width: calc(100% + 32px); }
+  .feature { grid-template-columns: 1fr; gap: 32px; padding: 56px 0; }
+  .details { grid-template-columns: 1fr 1fr; gap: 28px; padding-bottom: 72px; }
+}
+@media (max-width: 480px) {
+  .details { grid-template-columns: 1fr; }
+  .year { gap: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

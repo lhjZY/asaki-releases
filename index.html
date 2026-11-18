@@ -1,0 +1,249 @@
+<!doctype html>
+<!--
+  Asaki's website, in the "Paper" direction: warm white, hairlines, the drawing as it is.
+  Both languages are in the page; html[data-lang] decides which is shown (see site.js).
+  The screenshots come from a trial database (ASAKI_DATA_FILE), never from real data.
+-->
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asaki</title>
+<meta name="description" content="Asaki 是一款以十天为节奏的 Mac 应用：安排要做的事，随手收下想到的、看到的，再按十天回头看。A Mac app that runs on ten-day periods: plan what to do, capture what you think and read, and look back every ten days.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="wrap">
+  <nav aria-label="Asaki">
+    <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="28" height="28">Asaki</a>
+    <div class="links">
+      <a href="#plan"><span lang="zh">安排</span><span lang="en">Plan</span></a>
+      <a href="#capture"><span lang="zh">收录</span><span lang="en">Capture</span></a>
+      <a href="#review"><span lang="zh">回顾</span><span lang="en">Review</span></a>
+      <a href="#download"><span lang="zh">下载</span><span lang="en">Download</span></a>
+      <button id="language" type="button"><span lang="zh" aria-label="Switch to English">EN</span><span lang="en" aria-label="切换到中文">中文</span></button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div>
+      <h1><span lang="zh">以十天为节奏，<br>专注今天。</span><span lang="en">Plan in ten days.<br>Focus on today.</span></h1>
+      <p class="lede">
+        <span lang="zh">Asaki 是一款 Mac 应用。它把一年分成 36 个十天：安排要做的事，随手收下想到的、看到的，再按十天回头看。</span>
+        <span lang="en">Asaki is a Mac app that divides the year into 36 periods of ten days. Plan what to do, capture what you think and read, and look back at the end of every period.</span>
+      </p>
+      <a class="button" href="#download"><span lang="zh">下载 Mac 版</span><span lang="en">Download for macOS</span></a>
+      <p class="note"><span lang="zh">版本 0.1.6，需要 macOS 26</span><span lang="en">Version 0.1.6. Requires macOS 26.</span></p>
+    </div>
+    <img class="portrait" src="assets/asaki.png" width="1024" height="1024"
+      alt="Asaki：戴圆框眼镜、扎低马尾的女孩，黑色线稿">
+  </section>
+
+  <!-- Where today falls in the year, as the app's own header draws it. Filled in by site.js. -->
+  <div class="wrap">
+    <div class="rhythm">
+      <span data-year-number></span>
+      <div class="year" data-year aria-hidden="true"></div>
+      <span data-year-position></span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <img class="shot" lang="zh" src="assets/app-zh.png" width="2392" height="1612"
+      alt="Asaki 的待办：以后、第 32 个十天、今天三列">
+    <img class="shot" lang="en" src="assets/app-en.png" width="2392" height="1612"
+      alt="Asaki's to-dos in three columns: Later, Period 32 and Today">
+  </div>
+
+  <section class="wrap" id="plan">
+    <p class="part"><span lang="zh">安排</span><span lang="en">Plan</span></p>
+    <div class="feature">
+      <div>
+        <h2><span lang="zh">十天，一个看得到头的期限</span><span lang="en">Ten days: a horizon you can see</span></h2>
+        <p>
+          <span lang="zh">一周太短，一个月又太长。十天够做完一件事，也短到可以如实安排。一年从 1 月 1 日起分成 36 个十天，最后五六天留作整理日，用来回顾和收尾。</span>
+          <span lang="en">A week is too short and a month too long. Ten days is enough to finish something and short enough to plan honestly. The year runs in 36 periods from January 1, and its last five or six days are kept for tidying up.</span>
+        </p>
+      </div>
+      <figure>
+        <div class="periods" data-periods aria-hidden="true"></div>
+        <figcaption data-today></figcaption>
+      </figure>
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2><span lang="zh">三列，一个方向</span><span lang="en">Three columns, one direction</span></h2>
+        <p>
+          <span lang="zh">左边是以后，放还没安排的事；中间是这十天；右边是今天。日期一到，任务自己往右走。没做完的会留在今天，不会悄悄消失。</span>
+          <span lang="en">Later is on the left, for what has no date yet. This period is in the middle and today on the right. Tasks move rightwards by themselves as their day comes, and what is not done stays in today instead of quietly going away.</span>
+        </p>
+      </div>
+      <figure>
+        <ol class="flow" aria-hidden="true">
+          <li><span lang="zh">以后</span><span lang="en">Later</span></li>
+          <li><span lang="zh">这十天</span><span lang="en">This period</span></li>
+          <li class="now"><span lang="zh">今天</span><span lang="en">Today</span></li>
+        </ol>
+      </figure>
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2><span lang="zh">生活的四个部分</span><span lang="en">Four parts of a life</span></h2>
+        <p>
+          <span lang="zh">工作、生活、成长、健康各有一个图形。这十天里做完得越多，图形闭合得越多，全部完成时它会被填满。一眼就能看出哪一部分被冷落了。</span>
+          <span lang="en">Work, life, growth and health each have a shape. The more of a period's tasks you finish, the further the shape closes, and it fills in when all are done. One look shows which part has been neglected.</span>
+        </p>
+      </div>
+      <figure>
+        <ul class="shapes" aria-hidden="true">
+          <li style="--hue:#3e63dd;--pale:#abbdf9;--done:35">
+            <svg viewBox="0 0 40 40"><path pathLength="100" d="M20 5l4.4 9.4 10.2 1.2-7.6 7 2 10-9-5-9 5 2-10-7.6-7 10.2-1.2z"/><path class="on" pathLength="100" d="M20 5l4.4 9.4 10.2 1.2-7.6 7 2 10-9-5-9 5 2-10-7.6-7 10.2-1.2z"/></svg>
+            <span lang="zh">工作</span><span lang="en">Work</span>
+          </li>
+          <li style="--hue:#46a758;--pale:#94ce9a;--done:100" class="full">
+            <svg viewBox="0 0 40 40"><path pathLength="100" d="M20 6.5l14.4 25.2H5.6z"/><path class="on" pathLength="100" d="M20 6.5l14.4 25.2H5.6z"/></svg>
+            <span lang="zh">生活</span><span lang="en">Life</span>
+          </li>
+          <li style="--hue:#00a2c7;--pale:#7dcedc;--done:60">
+            <svg viewBox="0 0 40 40"><circle pathLength="100" cx="20" cy="20" r="14.4" transform="rotate(-90 20 20)"/><circle class="on" pathLength="100" cx="20" cy="20" r="14.4" transform="rotate(-90 20 20)"/></svg>
+            <span lang="zh">成长</span><span lang="en">Growth</span>
+          </li>
+          <li style="--hue:#e93d82;--pale:#eaacc3;--done:15">
+            <svg viewBox="0 0 40 40"><path pathLength="100" d="M20 12.4a7.6 7.6 0 0 1 14.8 2.4c0 5.6-4 11.2-14.8 18.8C9.2 26 5.2 20.4 5.2 14.8A7.6 7.6 0 0 1 20 12.4z"/><path class="on" pathLength="100" d="M20 12.4a7.6 7.6 0 0 1 14.8 2.4c0 5.6-4 11.2-14.8 18.8C9.2 26 5.2 20.4 5.2 14.8A7.6 7.6 0 0 1 20 12.4z"/></svg>
+            <span lang="zh">健康</span><span lang="en">Health</span>
+          </li>
+        </ul>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap" id="capture">
+    <p class="part"><span lang="zh">收录</span><span lang="en">Capture</span></p>
+    <div class="feature">
+      <div>
+        <h2><span lang="zh">在任何 App 里，一个快捷键</span><span lang="en">One shortcut, from any app</span></h2>
+        <p>
+          <span lang="zh">收录面板浮在当前 App 之上，记下一件待办、一个念头或一段读到的文字，不必离开手上的事。灵感、读书摘录这样的场景可以改名，也可以自己添加。选中的文字、图片和文件，或者刚复制的内容，也能直接收进今天。</span>
+          <span lang="en">The capture panel floats over the app you are in. Write down a task, a thought or a passage you have read without leaving what you are doing. Scenes such as Ideas and Reading Notes can be renamed, and you can add your own. Selected text, images and files, or whatever you have just copied, go straight into today.</span>
+        </p>
+      </div>
+      <figure>
+        <dl class="keys">
+          <div><dt><kbd>⌥</kbd><kbd>Space</kbd></dt><dd><span lang="zh">待办</span><span lang="en">To-do</span></dd></div>
+          <div><dt><kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd></dt><dd><span lang="zh">随手记</span><span lang="en">Jot</span></dd></div>
+          <div><dt><kbd>⌃</kbd><kbd>⌥</kbd><kbd>1</kbd></dt><dd><span lang="zh">灵感</span><span lang="en">Ideas</span></dd></div>
+          <div><dt><kbd>⌃</kbd><kbd>⌥</kbd><kbd>2</kbd></dt><dd><span lang="zh">读书摘录</span><span lang="en">Reading Notes</span></dd></div>
+          <div><dt><kbd>⌃</kbd><kbd>⌥</kbd><kbd>V</kbd></dt><dd><span lang="zh">收录剪贴板</span><span lang="en">Capture the clipboard</span></dd></div>
+        </dl>
+      </figure>
+    </div>
+
+    <div class="feature wide">
+      <div>
+        <h2><span lang="zh">今天，排成一条线</span><span lang="en">Today, in one line</span></h2>
+        <p>
+          <span lang="zh">今天收下的内容按时间排列，旁边是今日回顾。记录点进去就能改，支持 Markdown，边写边显示效果；图片和文件跟在记录下方。</span>
+          <span lang="en">What you captured today is laid out by time, with today's review beside it. Click an entry to change it. Markdown is shown as you type, and images and files sit under their entry.</span>
+        </p>
+      </div>
+      <img class="shot" lang="zh" src="assets/today-zh.png" width="2392" height="1292" loading="lazy"
+        alt="Asaki 的今日：按时间排列的记录和今日回顾">
+      <img class="shot" lang="en" src="assets/today-en.png" width="2392" height="1292" loading="lazy"
+        alt="Asaki's Today page: entries by time, with today's review">
+    </div>
+  </section>
+
+  <section class="wrap" id="review">
+    <p class="part"><span lang="zh">回顾</span><span lang="en">Review</span></p>
+    <div class="feature wide">
+      <div>
+        <h2><span lang="zh">每个十天，回头看一次</span><span lang="en">Look back every ten days</span></h2>
+        <p>
+          <span lang="zh">过去的日子按年、十天、天整理在记录里。选中一个十天，能看到各部分的完成情况、做完和没做完的待办，以及每一天的回顾与记录。一个十天结束还没回顾时，记录的图标上会出现一个蓝点。</span>
+          <span lang="en">Past days are kept in Records by year, period and day. Choose a period to see how each part of life went, the tasks done and not done, and every day's review and entries. When a period has ended without a review, a blue dot appears on the Records icon.</span>
+        </p>
+      </div>
+      <img class="shot" lang="zh" src="assets/records-zh.png" width="2392" height="1612" loading="lazy"
+        alt="Asaki 的记录：左侧按十天和天整理，右侧是第 32 个十天的回顾">
+      <img class="shot" lang="en" src="assets/records-en.png" width="2392" height="1612" loading="lazy"
+        alt="Asaki's Records: periods and days on the left, the review of period 32 on the right">
+    </div>
+
+    <div class="feature">
+      <div>
+        <h2><span lang="zh">请模型写一段回顾</span><span lang="en">Have a model write the review</span></h2>
+        <p>
+          <span lang="zh">回顾里的统计和列表都直接来自你的记录，不需要 AI。想要一段文字时，可以选一个模型服务来写，用你自己的密钥。只有点“生成回顾”时才会发送，发送前可以查看全文，结果确认后才保存。</span>
+          <span lang="en">The figures and lists in a review come straight from your records, with no AI involved. When you want it written up, choose a model service and use your own key. Nothing is sent until you click Generate, you can read everything before it goes, and the result is saved only when you accept it.</span>
+        </p>
+      </div>
+      <figure>
+        <ul class="services">
+          <li>DeepSeek</li><li>Kimi</li><li><span lang="zh">通义千问</span><span lang="en">Qwen</span></li><li><span lang="zh">智谱 GLM</span><span lang="en">Zhipu GLM</span></li>
+          <li><span lang="zh">豆包</span><span lang="en">Doubao</span></li><li>MiniMax</li>
+          <li><span lang="zh">硅基流动</span><span lang="en">SiliconFlow</span></li>
+        </ul>
+      </figure>
+    </div>
+
+    <dl class="details">
+      <div>
+        <dt><span lang="zh">到时提醒</span><span lang="en">Reminders</span></dt>
+        <dd><span lang="zh">在一圈 24 小时的表盘上定时间。时间一到，屏幕右上角滑入一张卡片，可以直接完成，或者十分钟后再提醒。</span><span lang="en">Set a time on a 24-hour dial. When it comes, a card slides in at the top right of the screen. Complete the task there, or have it come back in ten minutes.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">按空格新建</span><span lang="en">Space to add</span></dt>
+        <dd><span lang="zh">按一下空格，写下接下来要做的事。备注、子任务、日期和时间都在同一个面板里。菜单栏图标旁显示今天还剩几件。</span><span lang="en">Press Space and write what comes next. Notes, subtasks, a date and a time are all in the same panel. The menu bar shows how many are left today.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">搜索</span><span lang="en">Search</span></dt>
+        <dd><span lang="zh">在任何视图按 ⌘F。日记、回顾和待办里的文字都能搜到，结果按十天分组，搜到的字会标出来。</span><span lang="en">Press ⌘F anywhere. Journal entries, reviews and tasks are all searched, with results grouped by period and every match highlighted.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">附件</span><span lang="en">Attachments</span></dt>
+        <dd><span lang="zh">图片和文件可以粘贴、拖入或收录，和记录放在一起。</span><span lang="en">Paste, drop or capture images and files, and they are kept with their entry.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">导出与导入</span><span lang="en">Export and import</span></dt>
+        <dd><span lang="zh">导出一个十天或全部记录，每天一个 Markdown 文件，附件放在旁边，任何编辑器都能打开。Markdown 文件也能导入成日记。</span><span lang="en">Export a period or everything as one Markdown file a day, attachments alongside, readable in any editor. Markdown files can be imported into the journal too.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">iCloud 同步</span><span lang="en">iCloud sync</span></dt>
+        <dd><span lang="zh">任务、日记和附件通过你自己的 iCloud 在设备之间同步，开发者看不到。默认关闭。</span><span lang="en">Tasks, journal and attachments sync through your own iCloud, where the developer cannot see them. Off until you turn it on.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">数据在你的 Mac 上</span><span lang="en">Your data, on your Mac</span></dt>
+        <dd><span lang="zh">没有账户和服务器，不收集使用数据。模型服务的密钥只存在这台 Mac 的钥匙串里。</span><span lang="en">No account, no server, no usage data. Keys for model services stay in this Mac's keychain.</span></dd>
+      </div>
+      <div>
+        <dt><span lang="zh">中文与 English</span><span lang="en">Chinese and English</span></dt>
+        <dd><span lang="zh">界面可以在中文和英文之间切换，浅色、深色主题跟随系统或自选。</span><span lang="en">Switch the app between Chinese and English, and follow the system's light or dark appearance or pick one.</span></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="wrap download" id="download">
+    <img src="assets/icon.png" alt="" width="72" height="72">
+    <h2><span lang="zh">从这个十天开始</span><span lang="en">Start with this period</span></h2>
+    <a class="button" href="https://github.com/lhjZY/asaki-releases/releases/latest/download/Asaki-arm64.dmg" data-download><span lang="zh">下载 Mac 版</span><span lang="en">Download for macOS</span></a>
+    <p class="note"><span lang="zh">版本 0.1.6，需要 macOS 26</span><span lang="en">Version 0.1.6. Requires macOS 26.</span></p>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Asaki</span>
+  <span class="footer-links">
+    <a href="privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy</span></a>
+    <span><span lang="zh">为 macOS 而设计</span><span lang="en">Designed for macOS</span></span>
+  </span>
+</footer>
+
+</body>
+</html>
