@@ -31,8 +31,8 @@
 <main class="wrap policy">
   <article lang="zh">
     <h2>Asaki 隐私政策</h2>
-    <p class="note">更新日期：2026 年 11 月 14 日</p>
-    <p>Asaki 是一个在你的 Mac 上运行的 App。它没有账户，也没有自己的服务器。我们（Asaki 的开发者）不收集你的任何数据，也看不到你在 Asaki 里写下的任何内容。</p>
+    <p class="note">更新日期：2026 年 11 月 19 日</p>
+    <p>Asaki 是一个在你的 Mac 上运行的 App。它没有账户。我们（Asaki 的开发者）不收集你的任何数据，也看不到你在 Asaki 里写下的任何内容。</p>
 
     <h3>我们不收集什么</h3>
     <ul>
@@ -42,11 +42,11 @@
     </ul>
 
     <h3>你的数据存在哪里</h3>
-    <p><strong>这台 Mac。</strong>任务、日记、回顾和附件保存在 Asaki 自己的沙盒里，其他 App 无法读取。模型服务的密钥保存在这台 Mac 的钥匙串里，不会同步。</p>
+    <p><strong>这台 Mac。</strong>任务、日记、回顾和附件保存在你的用户文件夹里，Asaki 自己的应用数据文件夹中（资源库/Application Support/com.asaki.mac）。模型服务的密钥保存在这台 Mac 的钥匙串里，不会同步。</p>
     <p><strong>你的 iCloud（可选）。</strong>打开 iCloud 同步后，同样的内容也会保存在你自己 iCloud 账户的私有数据库里，用于在你的设备之间同步。这部分数据由 Apple 按照 iCloud 的条款保管，只有你的 Apple 账户能访问，开发者看不到。单个超过 10MB 的附件只留在本机，不会同步。iCloud 同步默认关闭，可以随时在设置里关掉。</p>
 
     <h3>什么时候会有内容离开这台 Mac</h3>
-    <p>只有下面两种情况：</p>
+    <p>只有下面三种情况：</p>
     <ol>
       <li><strong>iCloud 同步</strong>：打开同步后，见上文。</li>
       <li><strong>生成回顾</strong>：只有在你点击“生成回顾”时，所选时间范围内的待办和日记文字才会发送给你在设置里选择的模型服务，例如 DeepSeek、Kimi、通义千问，或者你自己填写的地址。如果你选择的是本机工具（Kimi Code 或 Qwen Code），内容由该工具使用你在其中登录的账号，发送给它对应的服务：Moonshot AI，或 Qwen Code 所连的模型服务。
@@ -58,18 +58,24 @@
           <li>收到内容的服务如何保存和使用它，由该服务自己的条款决定，与 Asaki 无关。</li>
         </ul>
       </li>
+      <li><strong>检查更新</strong>：Asaki 会从它的官网读取版本列表，看有没有新版本；有新版本并且你同意后，从官网下载安装包。请求里只有网络请求本身带的信息（例如你的 IP 地址和 Asaki 的版本号），不含你的任何内容。第二次打开 Asaki 时它会问你是否自动检查，之后可以随时在设置的“关于”里关掉。</li>
     </ol>
     <p>除此之外，Asaki 不会把任何内容发送到网络上。</p>
 
-
-    <h3>收录与剪贴板</h3>
-    <p>Asaki 只在你主动收录时读取内容：按下“收录剪贴板”的快捷键时读取剪贴板，使用系统服务“收录到 Asaki”时读取你选中的文字或文件。读取到的内容只保存在你的 Asaki 里。Asaki 不会在后台读取剪贴板，也不会读取其他 App 的内容。</p>
+    <h3>收录与辅助功能权限</h3>
+    <p>Asaki 只在你主动收录时读取内容：</p>
+    <ul>
+      <li><strong>收录选中内容</strong>：按下快捷键（默认 ⌘⇧K）时，Asaki 通过你授予的辅助功能权限，读取最前面的 App 里你选中的文字；在浏览器里还会读取当前网页的标题和地址，作为来源。读不到时，它会替你按一次 ⌘C 再从剪贴板取，取完把剪贴板恢复原样。密码管理器和密码输入框里的内容一律不读。</li>
+      <li><strong>没有选中内容时</strong>：Asaki 会收录你刚复制的内容，或你几分钟内刚截的屏（从系统保存截屏的文件夹里找，默认是桌面）。</li>
+      <li><strong>系统服务</strong>：在右键菜单的“服务”里选“收录到 Asaki”时，读取你选中的文字或文件。</li>
+    </ul>
+    <p>为了判断剪贴板里的内容是不是刚复制的，Asaki 在运行时会留意剪贴板是否发生变化，但不会读取其中的内容。图片里的文字由这台 Mac 本地识别，不会上传。读取到的内容只保存在你的 Asaki 里。辅助功能权限可以随时在系统设置的“隐私与安全性”里收回。</p>
 
     <h3>你可以随时</h3>
     <ul>
       <li>在“记录”里把内容导出成普通的 Markdown 文件。</li>
       <li>删除任意一条记录、回顾或任务。</li>
-      <li>关闭 iCloud 同步，或在设置里选择不使用任何模型服务。</li>
+      <li>关闭 iCloud 同步、自动检查更新，或在设置里选择不使用任何模型服务。</li>
       <li>删除 Asaki 及其数据。如果打开过 iCloud 同步，可以在系统设置里 iCloud 的存储管理中删除 Asaki 在 iCloud 中的数据。</li>
     </ul>
 
@@ -85,8 +91,8 @@
 
   <article lang="en">
     <h2>Asaki Privacy Policy</h2>
-    <p class="note">Last updated: November 14, 2026</p>
-    <p>Asaki is an app that runs on your Mac. It has no accounts and no servers of its own. We, Asaki's developer, collect none of your data and cannot see anything you write in Asaki.</p>
+    <p class="note">Last updated: November 19, 2026</p>
+    <p>Asaki is an app that runs on your Mac. It has no accounts. We, Asaki's developer, collect none of your data and cannot see anything you write in Asaki.</p>
 
     <h3>What we do not collect</h3>
     <ul>
@@ -96,11 +102,11 @@
     </ul>
 
     <h3>Where your things are kept</h3>
-    <p><strong>On this Mac.</strong> Tasks, journal entries, reviews and attachments are kept in Asaki's own sandbox, which other apps cannot read. Keys for model services are kept in this Mac's keychain and are never synced.</p>
+    <p><strong>On this Mac.</strong> Tasks, journal entries, reviews and attachments are kept in Asaki's own folder in your user folder (Library/Application Support/com.asaki.mac). Keys for model services are kept in this Mac's keychain and are never synced.</p>
     <p><strong>In your iCloud, if you choose.</strong> With iCloud sync on, the same things are also kept in the private database of your own iCloud account, to sync between your devices. Apple keeps them under iCloud's terms; only your Apple Account can reach them, and the developer cannot see them. Attachments larger than 10 MB stay on the Mac they were added on. iCloud sync is off until you turn it on, and you can turn it off at any time in Settings.</p>
 
     <h3>When anything leaves this Mac</h3>
-    <p>Only in these two cases:</p>
+    <p>Only in these three cases:</p>
     <ol>
       <li><strong>iCloud sync</strong>, when it is on, as above.</li>
       <li><strong>Writing a review</strong>: only when you click “Write a Review” is the text of the tasks and journal entries in the chosen period sent, to the model service you chose in Settings, such as DeepSeek, Kimi or Qwen, or an address you entered. If you chose a tool on this Mac (Kimi Code or Qwen Code), the tool sends it, with the account you are signed in to there, to its own service: Moonshot AI, or the model service Qwen Code is set up with.
@@ -112,18 +118,24 @@
           <li>How a service keeps and uses what it receives is up to that service's own terms.</li>
         </ul>
       </li>
+      <li><strong>Checking for updates</strong>: Asaki reads the list of versions from its website to see whether there is a newer one, and, when there is and you agree, downloads it from there. The request carries only what any network request does (such as your IP address and Asaki's version), and none of your things. The second time you open Asaki it asks whether to check automatically; you can turn that off at any time in Settings, under About.</li>
     </ol>
     <p>Apart from these, Asaki sends nothing over the network.</p>
 
-
-    <h3>Capturing and the clipboard</h3>
-    <p>Asaki reads only what you ask it to keep: the clipboard when you press the “Save Clipboard” shortcut, and the text or files you selected when you use the “Save to Asaki” service. What it reads is kept only in your Asaki. Asaki never reads the clipboard in the background, and never reads other apps' contents.</p>
+    <h3>Capturing and Accessibility</h3>
+    <p>Asaki reads only what you ask it to keep:</p>
+    <ul>
+      <li><strong>Save Selection</strong>: when you press the shortcut (⌘⇧K by default), Asaki uses the Accessibility permission you granted to read the text you selected in the frontmost app; in a browser it also reads the page's title and address, as the source. When it cannot read the selection, it presses ⌘C for you, takes it from the clipboard, and then puts the clipboard back as it was. It never reads password managers or password fields.</li>
+      <li><strong>When nothing is selected</strong>: Asaki keeps what you just copied, or a screenshot you took in the last few minutes, looked for in the folder macOS saves screenshots to (the Desktop unless you changed it).</li>
+      <li><strong>The system service</strong>: choosing “收录到 Asaki” (Save to Asaki) under Services in a context menu reads the text or files you selected.</li>
+    </ul>
+    <p>To tell whether the clipboard holds something you just copied, Asaki notices while it is running when the clipboard changes, without reading what is in it. Text in images is recognized on this Mac and never uploaded. What Asaki reads is kept only in your Asaki. You can take back the Accessibility permission at any time in System Settings, under Privacy &amp; Security.</p>
 
     <h3>At any time, you can</h3>
     <ul>
       <li>Export your things as plain Markdown files from Records.</li>
       <li>Delete any entry, review or task.</li>
-      <li>Turn off iCloud sync, or choose no model service in Settings.</li>
+      <li>Turn off iCloud sync or automatic update checks, or choose no model service in Settings.</li>
       <li>Delete Asaki and its data. If you used iCloud sync, Asaki's data in iCloud can be deleted from iCloud storage management in System Settings.</li>
     </ul>
 
