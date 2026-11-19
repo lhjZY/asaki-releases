@@ -3,6 +3,15 @@
   <channel>
     <title>Asaki</title>
     <item>
+      <title>Asaki 0.1.9</title>
+      <pubDate>Thu, 19 Nov 2026 03:20:54 +0000</pubDate>
+      <sparkle:version>10</sparkle:version>
+      <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>菜单栏菜单更清楚</p><ul><li>今天的任务后面显示分类图标，和看板一致</li><li>添加待办、随手记等收录项旁显示快捷键</li><li>“收录剪贴板”改为“收录选中内容”，和 ⇧⌘K 做同一件事</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.9/Asaki-arm64.dmg" type="application/octet-stream" length="9967285" sparkle:edSignature="esKhWCKnmqSI49S0M51rJVMEFAgZhE1s8a3kuL7Ycp6aqXJOw7tOgvSm2m9zgbgKdNr5B+lul9biILPV9kDeDQ=="/>
+    </item>
+    <item>
       <title>Asaki 0.1.8</title>
       <pubDate>Thu, 19 Nov 2026 02:18:52 +0000</pubDate>
       <sparkle:version>9</sparkle:version>
