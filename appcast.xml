@@ -2,5 +2,14 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
     <title>Asaki</title>
+    <item>
+      <title>Asaki 0.1.8</title>
+      <pubDate>Thu, 19 Nov 2026 02:18:52 +0000</pubDate>
+      <sparkle:version>9</sparkle:version>
+      <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Asaki 现在可以自己更新</p><ul><li>有新版本时会提示，同意后在后台下载，退出时安装</li><li>设置的“关于”里可以开关“自动检查更新”，也可以立即检查</li><li>应用菜单里新增“检查更新…”</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.8/Asaki-arm64.dmg" type="application/octet-stream" length="9961270" sparkle:edSignature="2n/S6zWV5DIbSPjbxa3o25gAzldS0KswHklR9GW/dAGUhrzUYD3VbnJJLkDd5ksYsQNouXSkwK7y0eLH/9h7Aw=="/>
+    </item>
   </channel>
 </rss>
