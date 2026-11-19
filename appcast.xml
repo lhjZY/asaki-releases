@@ -3,6 +3,15 @@
   <channel>
     <title>Asaki</title>
     <item>
+      <title>Asaki 0.1.10</title>
+      <pubDate>Thu, 19 Nov 2026 03:45:09 +0000</pubDate>
+      <sparkle:version>11</sparkle:version>
+      <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>生成的回顾不会再丢</p><ul><li>生成回顾后去别的页面再回来，草稿还在，可以继续保存、重新生成或放弃</li><li>生成时离开页面，回来就能看到结果</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.10/Asaki-arm64.dmg" type="application/octet-stream" length="9981342" sparkle:edSignature="0zX3AjBONUzMZTC+cjB7B/KTtxpX6xHA9Ua9mf4DXbuK8zigK+JIv6/oaPU7Kqz2MAwPCDEtpyEUWnJFwne0Cg=="/>
+    </item>
+    <item>
       <title>Asaki 0.1.9</title>
       <pubDate>Thu, 19 Nov 2026 03:20:54 +0000</pubDate>
       <sparkle:version>10</sparkle:version>
