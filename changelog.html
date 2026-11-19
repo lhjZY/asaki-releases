@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+  Asaki's changelog: a version each, newest first. script/publish_update.py in the app's repository
+  adds each release here as it adds it to appcast.xml, from the same release notes.
+-->
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asaki 更新日志 Changelog</title>
+<meta name="description" content="Asaki 每个版本的更新内容。What changed in each version of Asaki.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="wrap">
+  <nav aria-label="Asaki">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="28" height="28">Asaki</a>
+    <div class="links">
+      <a class="section" href="index.html#plan"><span lang="zh">安排</span><span lang="en">Plan</span></a>
+      <a class="section" href="index.html#capture"><span lang="zh">收录</span><span lang="en">Capture</span></a>
+      <a class="section" href="index.html#review"><span lang="zh">回顾</span><span lang="en">Review</span></a>
+      <a href="changelog.html" aria-current="page"><span lang="zh">更新日志</span><span lang="en">Changelog</span></a>
+      <a class="nav-download" href="https://github.com/lhjZY/asaki-releases/releases/latest/download/Asaki-arm64.dmg"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span lang="zh">下载 Mac 版</span><span lang="en">Download for Mac</span></a>
+      <button id="language" type="button"><span lang="zh" aria-label="Switch to English">EN</span><span lang="en" aria-label="切换到中文">中文</span></button>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap policy changelog">
+  <h2><span lang="zh">更新日志</span><span lang="en">Changelog</span></h2>
+  <!-- Releases, newest first. publish_update.py adds each one below this line. -->
+  <article class="release" id="v0.1.8">
+    <h3>0.1.8</h3>
+    <p class="note"><span lang="zh">2026 年 11 月 19 日</span><span lang="en">November 19, 2026</span></p>
+    <div lang="zh"><p>Asaki 现在可以自己更新</p><ul><li>有新版本时会提示，同意后在后台下载，退出时安装</li><li>设置的“关于”里可以开关“自动检查更新”，也可以立即检查</li><li>应用菜单里新增“检查更新…”</li></ul></div>
+    <div lang="en"><p>Asaki now updates itself</p><ul><li>When there is a new version, it says so, downloads it in the background once you agree, and installs it when you quit</li><li>Turn “Check for Updates Automatically” on or off, or check now, in Settings under About</li><li>New in the app menu: “Check for Updates…”</li></ul></div>
+  </article>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 Asaki</span>
+  <span class="footer-links">
+    <a href="privacy.html"><span lang="zh">隐私政策</span><span lang="en">Privacy</span></a>
+    <span><span lang="zh">为 macOS 而设计</span><span lang="en">Designed for macOS</span></span>
+  </span>
+</footer>
+
+</body>
+</html>

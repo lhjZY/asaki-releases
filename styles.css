@@ -29,7 +29,10 @@ html[data-lang="zh"] [lang="en"], html[data-lang="en"] [lang="zh"] { display: no
 nav { display: flex; align-items: center; justify-content: space-between; height: 64px; border-bottom: var(--line); font-size: 13px; color: var(--sand11); }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600; color: var(--sand12); }
 .links { display: flex; align-items: center; gap: 28px; }
-.links a:hover, #language:hover { color: var(--sand12); }
+.links a:hover, #language:hover, .links a[aria-current] { color: var(--sand12); }
+.nav-download { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; border-radius: 16px; background: var(--sand12); color: var(--paper); font-weight: 550; }
+.links .nav-download:hover { background: #3b3a37; color: var(--paper); }
+.nav-download svg { width: 13px; height: 13px; fill: currentColor; margin-top: -2px; }
 #language { font-size: 13px; color: var(--sand11); padding: 4px 10px; border: var(--line); border-radius: 6px; }
 
 h1 { font-size: 56px; line-height: 1.12; letter-spacing: -1.4px; font-weight: 650; }
@@ -122,13 +125,18 @@ footer { display: flex; justify-content: space-between; padding-top: 24px; paddi
 .policy ul, .policy ol { margin-top: 12px; padding-left: 1.4em; }
 .policy li + li { margin-top: 6px; }
 .policy li ul { margin-top: 8px; }
+/* The changelog: each version under a hairline, newest first. */
+.changelog > h2 { margin-bottom: 8px; }
+.release { max-width: 42em; margin-top: 32px; padding-top: 24px; border-top: var(--line); }
+.release h3 { margin-top: 0; font-variant-numeric: tabular-nums; }
+.release .note { margin-top: 4px; }
 .policy .mail { color: var(--sand12); border-bottom: var(--line); border-color: var(--sand9); }
 
 @media (max-width: 860px) {
   .wrap { padding: 0 24px; }
   h1 { font-size: 40px; letter-spacing: -.8px; }
   .links { gap: 18px; }
-  .links a[href="#plan"], .links a[href="#capture"], .links a[href="#review"] { display: none; }
+  .links .section { display: none; }
   .hero { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 40px; }
   .portrait { justify-self: center; max-width: 280px; order: -1; }
   .rhythm { grid-template-columns: 1fr auto; row-gap: 12px; }
