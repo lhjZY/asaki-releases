@@ -3,6 +3,15 @@
   <channel>
     <title>Asaki</title>
     <item>
+      <title>Asaki 0.1.11</title>
+      <pubDate>Wed, 25 Nov 2026 06:03:52 +0000</pubDate>
+      <sparkle:version>12</sparkle:version>
+      <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Asaki 完全免费</p><ul><li>去掉了 Asaki Pro：所有功能直接可用，没有购买，也没有订阅</li><li>设置的“关于”里不再有 Asaki Pro 一栏</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.11/Asaki-arm64.dmg" type="application/octet-stream" length="9940583" sparkle:edSignature="p67QM3C7tkNCjIZjCrv/i65DXy4ny3CuqhcWGaDwNzJE32s9L/uwCj243rRmPiWuJGj6sRpcNjHHAx9mWzUjAA=="/>
+    </item>
+    <item>
       <title>Asaki 0.1.10</title>
       <pubDate>Thu, 19 Nov 2026 03:45:09 +0000</pubDate>
       <sparkle:version>11</sparkle:version>
