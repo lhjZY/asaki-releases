@@ -3,6 +3,15 @@
   <channel>
     <title>Asaki</title>
     <item>
+      <title>Asaki 0.1.12</title>
+      <pubDate>Wed, 25 Nov 2026 07:05:33 +0000</pubDate>
+      <sparkle:version>13</sparkle:version>
+      <sparkle:shortVersionString>0.1.12</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>引导可以重新查看</p><ul><li>在设置的“关于”里点“重新查看”，引导从第一步开始，结尾的动画照常播放，不再是白屏</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.12/Asaki-arm64.dmg" type="application/octet-stream" length="9940621" sparkle:edSignature="uFGLkA/UomJ8wyeq3XJxTAWtlTX76uhM21k+YSxZGPtzeEHP8GXXb9xagbyHhC/dqPW4jmM6fSHThrRAKdUwCQ=="/>
+    </item>
+    <item>
       <title>Asaki 0.1.11</title>
       <pubDate>Wed, 25 Nov 2026 06:03:52 +0000</pubDate>
       <sparkle:version>12</sparkle:version>
