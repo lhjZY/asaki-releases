@@ -3,6 +3,15 @@
   <channel>
     <title>Asaki</title>
     <item>
+      <title>Asaki 0.1.13</title>
+      <pubDate>Wed, 25 Nov 2026 10:35:30 +0000</pubDate>
+      <sparkle:version>14</sparkle:version>
+      <sparkle:shortVersionString>0.1.13</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<ul><li>检查更新改用官网新地址 iasaki.top。</li></ul>]]></description>
+      <enclosure url="https://github.com/lhjZY/asaki-releases/releases/download/v0.1.13/Asaki-arm64.dmg" type="application/octet-stream" length="9940567" sparkle:edSignature="CiI2jnI5PQ5WRb+7jLHh0QwJ8m4G7OD9Zu6/T/GRYHprs3HMmpB6oiQvQfBTXRm/ipnsveY/J0Q9eBqHUPyDCg=="/>
+    </item>
+    <item>
       <title>Asaki 0.1.12</title>
       <pubDate>Wed, 25 Nov 2026 07:05:33 +0000</pubDate>
       <sparkle:version>13</sparkle:version>
